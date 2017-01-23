@@ -1,0 +1,41 @@
+0x00, NULL
+0x01, Den of Evil
+0x02, Sisters' Burial Grounds
+0x03, Tools of the Trade
+0x04, The Search for Cain
+0x05, The Forgotten Tower
+0x06, Sisters to the Slaughter
+0x07, NULL
+0x08, NULL
+0x09, Radament's Lair
+0x0A, The Horadric Staff
+0x0B, Tainted Sun
+0x0C, Arcane Sanctuary
+0x0D, The Summoner
+0x0E, The Seven Tombs
+0x0F, NULL
+0x10, NULL
+0x11, Lam Esen's Tome
+0x12, Khalim's Will
+0x13, Blade of the Old Religion
+0x14, The Golden Bird
+0x15, The Blackened Temple
+0x16, The Guardian
+0x17, NULL
+0x18, NULL
+0x19, The Fallen Angel
+0x1A, Terror's End
+0x1B, Hell's Forge
+0x1C, NULL
+0x1D, NULL
+0x1E, NULL
+0x1F, NULL
+0x20, NULL
+0x21, NULL
+0x22, NULL
+0x23, Siege on Harrogath
+0x24, Rescue on Mount Arreat
+0x25, Prison of Ice
+0x26, Betrayal of Harrogath
+0x27, Rite of Passage
+0x28, Eve of Destruction

@@ -1,0 +1,4 @@
+#include "res.h"
+
+ID_D2EM_ICON		ICON		"D2EM.ico"
+//ID_D2EM_ICON		ICON		"Bug.ico"

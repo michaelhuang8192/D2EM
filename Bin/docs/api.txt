@@ -1,0 +1,49 @@
+_D2EM:
+const char* GetExecPath(); //DLL Path
+DWORD GetTickCount();
+DWORD GetTickInterval(DWORD last_tick);
+void ASleep(ms);
+void DrawText(int x, int y, const char *str, DWORD RBG);
+int PostMessage(UINT msg, UINT lp, UINT wp);
+int SendPacket(const char* buf, int dst, int deferred); dst(0=client, 1=server)
+(x,y) GetPos(int type=0, int id=0)
+(x,y) GetFreeGrid(int inv_id, int w, int h); #stash 7, inv 3
+(type, cls_id, x, y, dst_id) GetStaticUnits(int type, cls_id=-1)
+int GetPointInMap(int x, int y);
+int GetFlag(int type, int idx, int val); type(0=panel, 1=player)
+((x,y), ..) GetTeleportPath(src_x, src_y, dst_x, dst_y);
+((x,y), ..) GetWalkPath(src_x, src_y, dst_x, dst_y);
+(tick,flag,sx,sy,w,h, ((name,h), ..) ) GetNPCDialog();
+(w, h, crel) GetWindowSize();
+(int,int) or ((int,int), ..) GetStat(idx, mul=0, type=0, id=0);
+((int,int), ..) GetAllStats(type=0, id=0);
+(id, lvl, flag, quantity, charge) GetSkill(id);
+(id, lvl, flag, quantity, charge) GetSkillBySide(side);
+(id, lvl, flag, quantity, charge) GetAllSkills();
+(num_inv,num_item,cursor) GetInvInfo(type=0.id=0);
+((w,h),(int,..)) D2EM_GetMapFromInv(idx,type=0,id=0);
+((cls_id,id,state,flag), ..) GetItemsFromInv(idx,cls_id=-1,type=0,id=0);
+int ItemCodeToClsId(char[4]);
+(w,h) GetItemSize(cls_id);
+(x,y,sx,sy,lvl_no) GetRoom(type=0,id=0);
+((x,y,sx,sy,lvl_no), ..) GetAllRooms();
+((x,y,sx,sy,lvl_no), ..) GetNearbyRooms();
+((cls_id,id,state,flag,lvl_no),..) GetNearbyUnits(type,cls_id=-1)
+
+/*
+0: (cls_id,state,flag)
+1: name
+2: path, t245:(x,y), t01:(x<<16,y<<16, (x,y,delta_x,delta_y))
+3: t4:(quality,flag,level,dst0,dst1), t1:(cls_id, flag, attr[9])
+4: t0(pets):((cls_id, id, flag),..), t1(owner):player_id, t4(onwer):(type, id)
+5: t0(portal):(d0_id, d1_id)
+6: t0(party):(state, party_id)
+7: t0(relation):(player_id, rel)
+8: t0(life):life
+9: t0(cur_skill):(id, lvl, flag, quantity, charge)
+*/
+GetUnit(idx,type=0,id=0);
+int GetItemPrice(item_id,npc_clsid, mode); //mode enum{ buy = 0, sell, gamble, repair }
+int GetGoldMax();
+1:ping GetGameInfo(type);
+int IsAttackableEx(type,id);
